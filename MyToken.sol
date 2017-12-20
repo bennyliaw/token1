@@ -13,7 +13,7 @@ contract MyToken {
         _;
     }
 
-    function MyToken()  public {
+    function MyToken() public {
         owner = msg.sender;
         myString = "hello";
         total = 1000;
