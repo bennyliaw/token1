@@ -24,7 +24,7 @@
 ----
 
 # reviewing DemoCoin ICO: https://erc20token.sonnguyen.ws/en/latest/
-- need pragma, constant keywords to be replaced with view
+- need pragma, constant keywords to be replaced with view/pure
 - in transferFrom function the below memory assignment is redundant, could be inline same as updating balances state
     >> var _allowance = allowed[_from][msg.sender];
 - Unused state in IcoToken:
@@ -40,7 +40,7 @@
 - how does the fallback in IcoContract works ?
     >> function () payable
    --> answered in http://solidity.readthedocs.io/en/develop/contracts.html
-- IcoContract.createTokens can be refactored such that no duplication on common parts just need to update tokensToAllocate, and add etherToRefund step for the softcap reached 
+- IcoContract.createTokens can be refactored such that no duplication on common parts just need to update tokensToAllocate, and add etherToRefund step for the softcap reached
 
 ----
 # references
