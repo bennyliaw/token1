@@ -19,6 +19,10 @@
      * internal is like protected in C++, allowing sub class to use
  - state (auto persisted, and would cost esp for writes) vs memory (local var)
  - reading state var is cheap, as can be done in/by local nodes
+ - assert vs require
+     * both will abort transaction but require will refund remaining gas whereas assert will use up all (!)
+      see https://ethereum.stackexchange.com/questions/15166/difference-between-require-and-assert-and-the-difference-between-revert-and-thro
+      
 
 
 ----
